@@ -1,0 +1,8 @@
+<!-- We need to import this on to the show page -->
+
+<%= simple_form_for [ @swimming_pool, @booking ] do |f| %>
+  <%= f.input :date %>
+  <%#= f.input :number_people %>
+  <%#= f.input :message %>
+  <%= f.submit "Book" %>
+<% end %>
