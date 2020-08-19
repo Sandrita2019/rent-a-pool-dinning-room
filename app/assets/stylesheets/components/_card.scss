@@ -1,0 +1,30 @@
+.card {
+  overflow: hidden;
+  border-radius: 8px;
+  text-decoration: none;
+  color: $dark-blue;
+  margin-bottom: 50px;
+  max-width: 310px;
+
+  &:hover {
+    text-decoration: none;
+    color: $dark-blue;
+  }
+
+  &-pool-img {
+    height: 187px;
+    object-fit: cover;
+    object-position: 50% 63%;
+    border-bottom-right-radius: 38px;
+  }
+
+  &-pool-title {
+    font-weight: 600;
+  }
+
+  &-pool-text {
+    font-size: 14px;
+    margin: 5px 0;
+    color: rgba(99, 90, 140, 0.9);
+  }
+}
