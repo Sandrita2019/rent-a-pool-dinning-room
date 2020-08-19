@@ -1,11 +1,14 @@
 class BookingsController < ApplicationController
   def create
-    @swimming_pool = Swimming_pool.find(params[:swimming_pool_id])
+    @swimming_pool = SwimmingPool.find(params[:swimming_pool_id])
     @booking = Booking.new(booking_params)
+    @booking.user = current_user
     @booking.swimming_pool = @swimming_pool
+    @booking.status = "pending"
 
     if @booking.save
       redirect_to swimming_pool_path(@swimming_pool)
+      flash[:notice] = "Booking created. An email has been sent to #{@booking.user.email}!"
     else
       render "swimming_pool/show"
     end
