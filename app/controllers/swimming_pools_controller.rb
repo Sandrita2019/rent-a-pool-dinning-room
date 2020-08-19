@@ -10,6 +10,7 @@ class SwimmingPoolsController < ApplicationController
 
   def show
     @swimming_pool = SwimmingPool.find(params[:id])
+    @booking = Booking.new
   end
 
   def create

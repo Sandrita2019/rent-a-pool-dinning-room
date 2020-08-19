@@ -1,4 +1,8 @@
 class BookingsController < ApplicationController
+  def new
+    @booking = Booking.new
+  end
+
   def create
     @swimming_pool = Swimming_pool.find(params[:swimming_pool_id])
     @booking = Booking.new(booking_params)
