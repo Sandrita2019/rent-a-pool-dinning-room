@@ -5,6 +5,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.swimming_pool = @swimming_pool
     @booking.status = "pending"
+    authorize @booking
 
     if @booking.save
       redirect_to swimming_pool_path(@swimming_pool)
