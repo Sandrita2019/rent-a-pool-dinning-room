@@ -3,12 +3,13 @@ class SwimmingPoolsController < ApplicationController
     @swimming_pools = SwimmingPool.all
   end
 
-  def show
-    @swimming_pool = SwimmingPool.find(params[:id])
-  end
-
+  # New needs to be abova show
   def new
     @swimming_pool = SwimmingPool.new
+  end
+
+  def show
+    @swimming_pool = SwimmingPool.find(params[:id])
   end
 
   def create
