@@ -14,45 +14,41 @@
     </div>
   </div>
 
-  <h1>Luxurious Pool</h1>
+  <h1><%= @swimming_pool.title %></h1>
 
   <div>
-    <img src="https://img.icons8.com/android/24/000000/marker.png"/>
-    <p>Bergmannstraße 18, 10961 Berlin</p>
+    <p> <i class="fas fa-map-marker-alt"></i> <%= @swimming_pool.location %></p>
     <p>€ 20</p>
   </div>
 
   <div class="section-blue">
     <h2 class="padding-down">Key Features</h2>
-    <ul>
-      <li><img src="https://img.icons8.com/pastel-glyph/64/000000/swimming-pool.png" class="icon"/></li>
-      <li>4-6 people</li>
-      <li><img src="https://img.icons8.com/dotty/80/000000/house-with-a-garden.png" class="icon"/></li>
-      <li>40m3</li>
-      <li><img src="https://img.icons8.com/ios/50/000000/picnic-table.png" class="icon"/></li>
-      <li>Table & Chairs</li>
-      <li><img src="https://img.icons8.com/wired/64/000000/weber--v1.png" class="icon"/></li>
-      <li>Barbecue</li>
-    </ul>
+    <div class="row">
+      <div class="col-6">
+        <img src="https://img.icons8.com/pastel-glyph/64/000000/swimming-pool.png" class="icon"/><
+          <p> <%= @swimming_pool.capacity %> people</p>
+        </div>
+        <div class="col-6">
+          <img src="https://img.icons8.com/dotty/80/000000/house-with-a-garden.png" class="icon"/>
+          <p> <%= @swimming_pool.size %> m2 </p>
+        </div>
+        <div class="col-6">
+          <img src="https://img.icons8.com/ios/50/000000/picnic-table.png" class="icon"/>
+          <p>Table & Chairs</p>
+        </div>
+        <div class="col-6">
+          <img src="https://img.icons8.com/wired/64/000000/weber--v1.png" class="icon"/>
+          <p>Barbecue</p>
+        </div>
+    </div>
   </div>
 
   <div  class="section-blue">
-    <h2 class="padding-down">Description</h2>
-    <p>Piscine disponible tout l'été; réservez en ligne. Le jardin est magnifique !
-  DISPONIBLE ces prochains jours ... même si la météo est inutilement catastrophiste (il y a souvent un petit orage vers 20h; quelques gouttes vers 9h et le reste de la journée​,​ un temps BEAU et CHAUD​,​ même si on voit " temps couvert" ou "partiellement nuageux":
-  - Ce dimanche et toute les fins de la semaine​,​ matin et ​/​ ou après-midi.
+    <h2 class="padding-down"> Description </h2>
+    <p><%= @swimming_pool.description %>
 
   En ce qui me concerne AUCUN problème quant aux risques sanitaires Covid 19; le jardin​,​ tout en longueur et sur 1.700 m2​,​ permet une bonne distanciation.
   </p>
   </div>
 </div>
 
-
-
-
-
-
-
-
-
-<a href="https://icons8.com/icon/3781/marker">Marker icon by Icons8</a>
