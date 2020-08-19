@@ -14,10 +14,11 @@ class SwimmingPoolsController < ApplicationController
 
   def create
     @swimming_pool = SwimmingPool.new(swimming_pool_params)
+
     if @swimming_pool.save
       redirect_to swimming_pool_path(@swimming_pool)
     else
-      render 'new'
+      render :new
     end
   end
 
