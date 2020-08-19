@@ -22,18 +22,6 @@ class ApplicationPolicy
     create?
   end
 
-  def show?
-    record.user == user
-  end
-
-  @bookings.each do |booking|
-    if policy(booking).show?
-       link_to "Update", edit_booking_path(booking)
-    else
-      redirect_to root_path
-    end
-  end
-
   def update?
     false
   end
