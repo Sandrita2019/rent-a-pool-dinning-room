@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'swimming_pools#index'
 
   resources :swimming_pools do
-    resources :bookings, only: [:new, :create]
+    resources :bookings, only: [:create]
   end
 
   resources :bookings, only: [:edit, :update]
