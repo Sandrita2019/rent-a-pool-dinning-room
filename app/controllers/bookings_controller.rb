@@ -29,6 +29,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_update_params
-    params,require(:booking).permit(:status)
+    params.require(:booking).permit(:status)
   end
 end
