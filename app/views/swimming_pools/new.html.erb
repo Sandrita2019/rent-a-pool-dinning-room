@@ -1,0 +1,12 @@
+<h1>Create a post of your Swimming Pool</h1>
+
+<p>Do you consider yourself a good host and would love to have people over to enjoy a sunny day?</p>
+<p>You are in the right place. Use the form bellow to create a post and advertise your pool on our website.</p>
+<p>Once you are done, just press submit to see your post </p>
+
+<%= simple_form_for @swimming_pool do |f| %>
+  <%= f.input :capacity %>
+  <%= f.input :location %>
+  <%= f.input :size %>
+  <%= f.submit %>
+<% end %>
