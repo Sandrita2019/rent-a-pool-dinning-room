@@ -7,23 +7,23 @@
 <div class="container">
   <h2 class="section-title">Our swimming pools 💦</h2>
   <div class="row justify-content-between">
-    <% 6.times do %>
-      <div class="col-4">
-        <%= link_to "#", class: "card" do %>
-          <img class="card-img-top card-pool-img" src="https://images.unsplash.com/photo-1586804204376-becb4dc730d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-pool-title">Tropical realness 🏝</h5>
-              <p class="card-pool-text">
-                <i class="fas fa-map-marker-alt"></i>
-                Província do Sul, Sri Lanka
-              </p>
-              <p class="card-pool-text">
-                <i class="fas fa-swimmer"></i>
-                15 people
-              </p>
-            </div>
+      <% @swimming_pools.each do |swimming_pool| %>
+        <div class="col-4">
+          <%= link_to swimming_pool_path(swimming_pool), class: "card" do %>
+            <img class="card-img-top card-pool-img" src="https://images.unsplash.com/photo-1586804204376-becb4dc730d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-pool-title"><%= swimming_pool.title %> 🏝</h5>
+                <p class="card-pool-text">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <%= swimming_pool.location %>
+                </p>
+                <p class="card-pool-text">
+                  <i class="fas fa-swimmer"></i>
+                  <%= swimming_pool.capacity %>
+                </p>
+              </div>
           <% end %>
         </div>
-    <% end %>
+      <% end %>
   </div>
 </div>
