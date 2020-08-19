@@ -1,18 +1,18 @@
 class SwimmingPoolsController < ApplicationController
   def index
-    @swimming_pools = Swimming_pool.all
+    @swimming_pools = SwimmingPool.all
   end
 
   def show
-    @swimming_pool = Swimming_pool.find(params[:id])
+    @swimming_pool = SwimmingPool.find(params[:id])
   end
 
   def new
-    @swimming_pool = Swimming_pool.new
+    @swimming_pool = SwimmingPool.new
   end
 
   def create
-    @swimming_pool = Swimming_pool.new(swimming_pool_params)
+    @swimming_pool = SwimmingPool.new(swimming_pool_params)
     if @swimming_pool.save
       redirect_to swimming_pool_path(@swimming_pool)
     else
