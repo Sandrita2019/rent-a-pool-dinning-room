@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 2020_08_19_092941) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "status"
+    t.string "message"
+    t.integer "number_people"
     t.index ["swimming_pool_id"], name: "index_bookings_on_swimming_pool_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
