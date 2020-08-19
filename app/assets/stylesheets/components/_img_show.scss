@@ -1,8 +1,22 @@
 .img-show {
-  width: 200px;
-  height: 100px;
+  width: 320px;
+  height: 305px;
 }
 
-.container-img-form {
+.padding-show {
+  margin-top: 100px;
+}
 
+// CSS for the sections inside show
+
+.section-blue {
+  background-color: rgba(201, 227, 237, 0.4);
+  padding: 50px;
+  border-radius: 0px 7px 63px 0px;
+  max-width: 700px;
+  margin-top: 50px;
+}
+
+.padding-down {
+  margin-bottom: 50px;
 }
