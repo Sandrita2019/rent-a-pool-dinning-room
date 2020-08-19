@@ -1,12 +1,12 @@
 <!-- Here goes the navbar-->
 
 <!-- Would love to have three photos here  -->
-<div class="space-above">
-  <img src="../assets/images/lux_pool.jpg" alt="luxurious pool">
+<div class="container-img-form">
+  <%= image_tag "lux_pool.jpg", alt: "luxurious pool", class: "img-show"%>
+  <!-- Import -form.thml.erb - bookings -->
+  <%= render 'bookings/form', booking: @booking %>
 </div>
 
-<!-- Import -form.thml.erb - bookings -->
-<%= render 'bookings/form', booking: @booking %>
 
 <h1>Luxurious Pool</h1>
 
