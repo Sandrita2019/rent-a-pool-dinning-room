@@ -25,7 +25,7 @@ class BookingsController < ApplicationController
 
   def booking_params
     # Here we might want to add a message and number of people
-    params.require(:booking).permit(:date)
+    params.require(:booking).permit(:date, :message, :number_people)
   end
 
   def booking_update_params
