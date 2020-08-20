@@ -1,0 +1,38 @@
+.footer {
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.footer-absolute {
+  position: absolute;
+}
+
+.social-media {
+  position: relative;
+  top: 0px;
+  right: -400px;
+}
+
+.padding {
+  padding-top: 50px;
+}
+
+.footer-copyright {
+  padding: 10px;
+}
+
+.footer-color {
+  color: rgba(8, 59, 77, 0.7);
+}
+
+.footer-color-dark {
+  color: rgb(8, 59, 77);
+}
+
+#small-text {
+  font-size: 10px;
+  position: relative;
+  top: 92px;
+  right: -15px;
+}
