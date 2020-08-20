@@ -5,7 +5,7 @@
   <div class="padding-show">
     <div class="row">
       <div class="col-6">
-        <%= image_tag "lux_pool.jpg", alt: "luxurious pool", class: "img-show"%>
+        <%= cl_image_tag @swimming_pool.photo.key, alt: "luxurious pool", class: "img-show", height: 300, width: 400, crop: :fill %>
       </div>
       <div class="col-6">
         <!-- Import -form.thml.erb - bookings -->

@@ -1,5 +1,6 @@
 class SwimmingPoolsController < ApplicationController
   def index
+
     if params[:query].present?
       @swimming_pools = SwimmingPool.where("location ILIKE ?", "%#{params[:query]}%")
     else
@@ -33,6 +34,6 @@ class SwimmingPoolsController < ApplicationController
   private
 
   def swimming_pool_params
-    params.require(:swimming_pool).permit(:capacity, :location, :size)
+    params.require(:swimming_pool).permit(:capacity, :location, :size, :photo)
   end
 end
