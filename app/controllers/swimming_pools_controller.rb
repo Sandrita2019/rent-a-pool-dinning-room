@@ -5,6 +5,7 @@ class SwimmingPoolsController < ApplicationController
     else
       @swimming_pools = SwimmingPool.all
     end
+    @swimming_pools = policy_scope(SwimmingPool)
   end
 
   # New needs to be abova show
@@ -15,10 +16,12 @@ class SwimmingPoolsController < ApplicationController
   def show
     @swimming_pool = SwimmingPool.find(params[:id])
     @booking = Booking.new
+    authorize @swimming_pool
   end
 
   def create
     @swimming_pool = SwimmingPool.new(swimming_pool_params)
+    authorize @swimming_pool
 
     if @swimming_pool.save
       redirect_to swimming_pool_path(@swimming_pool)
