@@ -1,5 +1,11 @@
 class SwimmingPoolsController < ApplicationController
   def index
+
+    if params[:query].present?
+      @swimming_pools = SwimmingPool.where("location ILIKE ?", "%#{params[:query]}%")
+    else
+      @swimming_pools = SwimmingPool.all
+    end
     @swimming_pools = policy_scope(SwimmingPool)
   end
 
@@ -16,6 +22,7 @@ class SwimmingPoolsController < ApplicationController
 
   def create
     @swimming_pool = SwimmingPool.new(swimming_pool_params)
+    authorize @swimming_pool
 
     if @swimming_pool.save
       redirect_to swimming_pool_path(@swimming_pool)

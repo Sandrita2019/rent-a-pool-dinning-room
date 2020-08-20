@@ -1,7 +1,18 @@
 <div class="home-banner">
   <div class="container banner-text">
-    <h1 class="header-home">Rent-A-Pool  🏊‍♀️</h1>
-    <p class="text-home">Lorem ipsum dolor sit amet, consectetur adipisicing elit </p>
+    <h1 class="header-home">Rent&#183;a&#183;Pool  🏊‍♀️</h1>
+    <p class="text-home">Paradise just around the corner</p>
+
+    <%= form_tag swimming_pools_path, method: :get do %>
+      <div class="search-form">
+        <%= text_field_tag :query,
+          params[:query],
+          class: "search-bar form-control",
+          placeholder: "Find a swimming pool near you"
+        %>
+        <%= submit_tag "Search", class: "btn btn-search" %>
+      </div>
+    <% end %>
   </div>
 </div>
 <div class="container">
@@ -14,7 +25,7 @@
             <%= cl_image_tag swimming_pool.photo.key, class: "card-img-top card-pool-img"%>
           <% end %>
               <div class="card-body">
-                <h5 class="card-pool-title"><%= swimming_pool.title %> 🏝</h5>
+                <h5 class="card-pool-title"><%= swimming_pool.title %> :desert_island:</h5>
                 <p class="card-pool-text">
                   <i class="fas fa-map-marker-alt"></i>
                   <%= swimming_pool.location %>
