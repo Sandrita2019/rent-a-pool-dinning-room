@@ -1,12 +1,13 @@
 class SwimmingPoolsController < ApplicationController
   def index
-
     if params[:query].present?
       @swimming_pools = SwimmingPool.where("location ILIKE ?", "%#{params[:query]}%")
     else
       @swimming_pools = SwimmingPool.all
     end
-    @swimming_pools = policy_scope(SwimmingPool)
+    # The commented line bellow needs to be like this, otherwise the
+    # search functionality is not going to work
+    skip_policy_scope # @swimming_pools = policy_scope(SwimmingPool)
   end
 
   # New needs to be abova show
