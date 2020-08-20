@@ -1,6 +1,22 @@
+// Booking form on show page
 .form {
   background-color: rgb(201, 227, 237);
   padding: 50px;
   border-radius: 7px 0px 0px 63px;
   max-width: 400px;
+  position: fixed;
+}
+
+// Search bar on Index page
+.search-form {
+  display: flex;
+  margin-top: 100px;
+}
+
+.search-bar {
+  width: 400px;
+  height: 42px;
+  border-radius: 3px;
+  border-style: none;
+  flex: 46% 0 0;
 }
