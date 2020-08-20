@@ -5,6 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "clean database"
+Booking.delete_all
+SwimmingPool.delete_all
+
 require 'faker'
 puts 'Creating swimming pools....'
 
