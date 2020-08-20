@@ -1,3 +1,4 @@
+// Booking button on Booking form
 .btn-book {
   background-color: rgb(8, 59, 77);
   color: white;
@@ -6,4 +7,16 @@
   border-radius: 3px;
   border-style: none;
   margin-top: 30px;
+}
+
+// Button Search on Index page
+.btn-search {
+  background-color: rgb(8, 59, 77);
+  color: white;
+  width: 225px;
+  height: 42px;
+  border-radius: 3px;
+  border-style: none;
+  margin-left: 10px;
+  flex: 25% 0 0;
 }
