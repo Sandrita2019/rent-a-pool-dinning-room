@@ -1,7 +1,7 @@
 class SwimmingPoolsController < ApplicationController
   def index
     if params[:query].present?
-      @swimming_pools = SwimmingPool.where("location ILIKE ?" "%#{params[:query]}%")
+      @swimming_pools = SwimmingPool.where("location ILIKE ?", "%#{params[:query]}%")
     else
       @swimming_pools = SwimmingPool.all
     end
