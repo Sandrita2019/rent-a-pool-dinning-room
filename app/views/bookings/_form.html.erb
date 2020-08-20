@@ -4,7 +4,7 @@
   <%= simple_form_for [ @swimming_pool, @booking ] do |f| %>
     <%= f.input :date %>
     <%= f.input :number_people %>
-    <%= f.input :message %>
+    <%= f.input :message, :as => :text, :input_html => { 'rows' => 5, 'cols' => 10 }%>
     <%= f.submit "Book", class: "btn btn-book w-100"%>
   <% end %>
 </div>
