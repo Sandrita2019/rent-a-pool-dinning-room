@@ -1,6 +1,6 @@
 class SwimmingPoolsController < ApplicationController
   def index
-    @swimming_pools = SwimmingPool.all
+    @swimming_pools = policy_scope(SwimmingPool)
   end
 
   # New needs to be abova show
@@ -11,6 +11,7 @@ class SwimmingPoolsController < ApplicationController
   def show
     @swimming_pool = SwimmingPool.find(params[:id])
     @booking = Booking.new
+    authorize @swimming_pool
   end
 
   def create
@@ -26,6 +27,6 @@ class SwimmingPoolsController < ApplicationController
   private
 
   def swimming_pool_params
-    params.require(:swimming_pool).permit(:capacity, :location, :size)
+    params.require(:swimming_pool).permit(:capacity, :location, :size, :photo)
   end
 end
