@@ -1,7 +1,7 @@
 .home-banner {
   background-image: url('https://images.unsplash.com/photo-1433740944490-b669cb8b1c44?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80');
   background-size: cover;
-  height: 515px;
+  height: 583px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,9 +19,10 @@
 }
 
 .header-home {
-  color: rgba(29, 14, 97, 0.9);
+  color: rgb(8, 59, 77);
   font-weight: 900;
-  font-size: 100px;
+  font-size: 80px;
+  word-spacing: 30px;
   // text-shadow: 5px 5px rgba(0, 181, 204, 0.7);
 }
 
@@ -32,5 +33,5 @@
 .text-home {
   font-weight: 600;
   font-size: 30px;
-  color: rgba(29, 14, 97, 0.9);
+  color: rgba(8, 59, 77, 0.7);
 }
