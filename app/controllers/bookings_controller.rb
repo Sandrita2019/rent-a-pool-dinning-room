@@ -1,4 +1,9 @@
 class BookingsController < ApplicationController
+  def index
+    @bookings = current_user.bookings
+    skip_policy_scope
+  end
+
   def create
     @swimming_pool = SwimmingPool.find(params[:swimming_pool_id])
     @booking = Booking.new(booking_params)
@@ -20,7 +25,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end
 
-  def update
+  def updates
     @booking = Booking.find(params[:id])
     @booking.update(booking_update_params)
   end
