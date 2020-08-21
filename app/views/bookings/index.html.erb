@@ -19,6 +19,18 @@
                 <i class="fas fa-swimmer"></i>
                 <%= booking.swimming_pool.capacity %>
               </p>
+               <p class="card-pool-text">
+                <i class="fas fa-calendar-week"></i>
+                <%= booking.date %>
+              </p>
+                <p class="card-pool-text">
+                <i class="fas fa-user-friends"></i>
+                <%= booking.number_people %>
+              </p>
+                <p class="card-pool-text">
+                <i class="fas fa-comments"></i>
+                <%= booking.message %>
+              </p>
             </div>
         <% end %>
       </div>
@@ -26,27 +38,32 @@
   </div>
 
   <h2>Past bookings</h2>
-    <div class=" pt-4 container">
-      <div class="row justify-content-between">
+    <div class=" pt-4 container booking">
         <% @bookings.each do |booking| %>
-          <div class="card col-4">
-            <img class="card-img-top card-pool-img" src="https://images.unsplash.com/photo-1586804204376-becb4dc730d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="Card image cap">
+          <div class="card-booking d-flex justify-content-between">
+            <div class="booking-image">
+               <img class="card-img-top card-pool-img" src="https://images.unsplash.com/photo-1586804204376-becb4dc730d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="Card image cap">
+             </div>
+             <div class="booking-info">
+             </div>
               <div class="card-body">
+                  <a href="#" class="btn btn-primary">See details</a>
+              </div>
                 <h5 class="card-pool-title"><%= booking.swimming_pool.title %> 🏝</h5>
-                 <div class="row justify-content-between">
-                 </div>
-                <p class="card-pool-text">
-                  <i class="fas fa-map-marker-alt"></i>
-                  <%= booking.swimming_pool.location %>
-                </p>
-                <p class="card-pool-text">
-                  <i class="fas fa-swimmer"></i>
-                  <%= booking.swimming_pool.capacity %>
+                    <p class="card-pool-text">
+                      <i class="fas fa-map-marker-alt"></i>
+                         <%= booking.swimming_pool.location %>
+                    </p>
+                    <p class="card-pool-text">
+                    <i class="fas fa-swimmer"></i>
+                    <%= booking.swimming_pool.capacity %>
                 </p>
               </div>
-          <% end %>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
