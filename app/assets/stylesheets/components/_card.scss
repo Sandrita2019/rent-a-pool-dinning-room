@@ -1,14 +1,17 @@
 .card {
   overflow: hidden;
   border-radius: 8px;
+  border-style: none;
   text-decoration: none;
   color: $dark-blue;
   margin-bottom: 50px;
   max-width: 310px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
   &:hover {
     text-decoration: none;
     color: $dark-blue;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
 
   &-pool-img {
@@ -25,6 +28,6 @@
   &-pool-text {
     font-size: 14px;
     margin: 5px 0;
-    color: rgba(99, 90, 140, 0.9);
+    color: rgba(8, 59, 77, 0.7);
   }
 }
