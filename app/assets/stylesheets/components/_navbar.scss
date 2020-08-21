@@ -18,6 +18,13 @@
   width: 40px;
 }
 
-.header-icon {
-  opacity: 0.5;
+.logo-icon {
+  text-decoration: none;
+  color: rgb(77, 175, 186);
+  font-size: 28px;
+  transition: font-size 150ms ease-in-out;
+
+  &:hover {
+    font-size: 30px;
+  }
 }

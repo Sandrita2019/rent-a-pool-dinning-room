@@ -1,8 +1,17 @@
-.img-show {
-  width: 320px;
-  height: 305px;
+.padding-show {
+  margin-top: 60px;
 }
 
-.padding-show {
-  margin-top: 100px;
+.carousel-image {
+  height: 396px;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: 7px;
+  margin-bottom: 10px;
 }
+
+.polaroid {
+  border-radius: 7px;
+}
+
