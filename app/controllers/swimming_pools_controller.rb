@@ -1,4 +1,5 @@
 class SwimmingPoolsController < ApplicationController
+  skip_before_action :authenticate_user #test
   def index
     if params[:query].present?
       @swimming_pools = SwimmingPool.where("location ILIKE ?", "%#{params[:query]}%")
