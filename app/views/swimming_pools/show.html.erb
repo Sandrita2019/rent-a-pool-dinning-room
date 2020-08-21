@@ -47,46 +47,60 @@
       <div>
         <!-- First section with the Features -->
         <div class="section-blue">
-        <h2 class="padding-down">Key Features</h2>
-        <div class="row">
-          <div class="col-6">
-            <img src="https://img.icons8.com/pastel-glyph/64/000000/swimming-pool.png" class="icon"/>
-            <p> <%= @swimming_pool.capacity %> people </p>
+          <h2 class="padding-down">Key Features</h2>
+          <div class="row key-feature-item">
+            <div class="col-4">
+              <img src="https://img.icons8.com/pastel-glyph/64/000000/swimming-pool.png" class="icon"/>
+              <p> <%= @swimming_pool.capacity %> people </p>
+            </div>
+            <div class="col-4">
+              <img src="https://img.icons8.com/dotty/80/000000/house-with-a-garden.png" class="icon"/>
+              <p> <%= @swimming_pool.size %> m2 </p>
+            </div>
+            <div class="col-4">
+              <img src="https://img.icons8.com/ios/50/000000/picnic-table.png" class="icon"/>
+              <p>Table & Chairs</p>
+            </div>
           </div>
-          <div class="col-6">
-            <img src="https://img.icons8.com/dotty/80/000000/house-with-a-garden.png" class="icon"/>
-            <p> <%= @swimming_pool.size %> m2 </p>
+          <div class="row">
+            <div class="col-4">
+              <img src="https://img.icons8.com/wired/64/000000/weber--v1.png" class="icon"/>
+              <p>Barbeque</p>
+            </div>
+            <div class="col-4">
+              <img src="https://img.icons8.com/wired/64/000000/cocktail.png" class="icon"/>
+              <p>Cocktails</p>
+            </div>
+            <div class="col-4">
+              <img src="https://img.icons8.com/ios/50/000000/dj.png" class="icon"/>
+              <p>DJ</p>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-6">
-            <img src="https://img.icons8.com/ios/50/000000/picnic-table.png" class="icon"/>
-            <p>Table & Chairs</p>
-          </div>
-          <div class="col-6">
-            <img src="https://img.icons8.com/wired/64/000000/weber--v1.png" class="icon"/>
-            <p>Barbeque</p>
-          </div>
-        </div>
         </div>
 
         <!-- Second section with the Description -->
         <div  class="section-blue">
           <h2 class="padding-down"> More about this pool </h2>
-          <p>Hi, I'm your host, David. I have been leaving Majorca for the past 8 years and it's my absolute pleasure to host you for a day.
-      The house and pool were design by my wife and I, it's our dream house and we love having poeple over and meeting new interesting minds.
-
-      You will have full access to the pool and facilities in the garden. There is also a nice little house with a private bathroom.
-      Feel free to use our barbeque, as long as you bring our own food and clean it.
-
-      We will offer you a welcome drink, one of my wife's special Mocktails and let you enjoy the space in privacy.
-      Looking forward to receiving you in our Pool!
+          <h4>About</h4>
+          <p>Hi, I'm your host, David. I have been living in Majorca for the past 8 years and it's my absolute pleasure to host you for a day.
+            The house and pool were designed by my wife and I, it's our dream house and we love having poeple over and meeting new interesting minds.
+            <br>
+            <br>
+          <h4>Facilities</h4>
+            You will have full access to the pool and facilities in the garden. There is also a nice little house with a private bathroom.
+            Feel free to use our barbeque, as long as you bring our own food and clean it. There's an option to have a DJ playing, please specify if
+            this is something you'd like to have when booking.
+            <br>
+            <br>
+          <h4>Other</h4>
+            We will offer you a welcome drink, one of my wife's special Mocktails and let you enjoy the space in privacy.
+            Looking forward to receiving you in our Pool!
           </p>
         </div>
 
         <!-- Map -->
         <div>
-          <div style="width: 500px;position: relative; margin-top: 50px; border-radius: 7px; overflow: hidden; height: 440px; box-shadow: 6px 7px 17px -8px rgba(0,0,0,0.8);"><iframe width="500" height="440" src="https://maps.google.com/maps?width=500&amp;height=440&amp;hl=en&amp;q=Santa%20Magalida+(Santa%20Magalida)&amp;ie=UTF8&amp;t=&amp;z=11&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><div style="position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;"><small style="line-height: 1.8;font-size: 2px;background: #fff;">Powered by <a href="http://www.googlemapsgenerator.com/en/">gmapgen en</a> & <a href="http://www.mijnquiz.nl/">Web Master reviews</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><br />
+          <div style="width: 660px;position: relative; margin-top: 50px; border-radius: 7px; overflow: hidden; height: 440px; box-shadow: 6px 7px 17px -8px rgba(0,0,0,0.8);"><iframe width="660" height="440" src="https://maps.google.com/maps?width=660&amp;height=440&amp;hl=en&amp;q=Santa%20Magalida+(Santa%20Magalida)&amp;ie=UTF8&amp;t=&amp;z=11&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><div style="position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;"><small style="line-height: 1.8;font-size: 2px;background: #fff;">Powered by <a href="http://www.googlemapsgenerator.com/en/">gmapgen en</a> & <a href="http://www.mijnquiz.nl/">Web Master reviews</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><br />
         </div>
 
         <!-- Link to Index page -->
