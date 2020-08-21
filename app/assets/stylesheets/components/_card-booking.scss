@@ -17,6 +17,7 @@
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
 
+
   &-pool-img {
     height: 187px;
     object-fit: cover;
@@ -33,4 +34,31 @@
     margin: 5px 0;
     color: rgba(8, 59, 77, 0.7);
   }
+}
+
+.main-card {
+  width: 500px;
+  overflow: hidden;
+  border-radius: 8px;
+  border-style: none;
+  text-decoration: none;
+  color: $dark-blue;
+  margin-bottom: 50px;
+  max-width: 310px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.main-card:hover {
+  text-decoration: none;
+  color: $dark-blue;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.main-image {
+  height: 186px;
+  width: 311px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: 0 0 38px 0;
+  margin-bottom: 10px;
 }

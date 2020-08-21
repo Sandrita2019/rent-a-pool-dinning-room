@@ -1,69 +1,76 @@
-<div class="container">
-  <div class="space-top"></div>
-  <h1>My bookings</h1>
-  <h2>Upcoming bookings</h2>
-  <div class=" pt-4 container">
-    <div class="row justify-content-between">
-      <% @bookings.each do |booking| %>
-        <div class="col-4">
-          <%= cl_image_tag booking.swimming_pool.photo.key, alt: "luxurious pool", class: "img-show carousel-image" %>
-            <div class="card-body">
-              <h5 class="card-pool-title"><%= booking.swimming_pool.title %> 🏝</h5>
-               <div class="row justify-content-between">
-               </div>
-              <p class="card-pool-text">
-                <i class="fas fa-map-marker-alt"></i>
-                <%= booking.swimming_pool.location %>
-              </p>
-              <p class="card-pool-text">
-                <i class="fas fa-swimmer"></i>
-                <%= booking.swimming_pool.capacity %>
-              </p>
-               <p class="card-pool-text">
-                <i class="fas fa-calendar-week"></i>
-                <%= booking.date %>
-              </p>
-                <p class="card-pool-text">
-                <i class="fas fa-user-friends"></i>
-                <%= booking.number_people %>
-              </p>
-                <p class="card-pool-text">
-                <i class="fas fa-comments"></i>
-                <%= booking.message %>
-              </p>
-            </div>
-        <% end %>
-      </div>
-    </div>
-  </div>
+<style>
+  .top{
+    margin-top: 60px;
+  }
+</style>
 
-  <h2>Past bookings</h2>
-    <div class=" pt-4 container booking">
+<div class="container">
+  <div class="top">
+    <h1>My bookings</h1>
+    <br>
+    <h2>Upcoming bookings</h2>
+  </div>
+  <br>
+  <br>
+  <div class="pt-6 container">
+    <div class="row justify-content-between">
         <% @bookings.each do |booking| %>
-          <div class="card-booking d-flex justify-content-between">
-            <div class="booking-image">
-               <img class="card-img-top card-pool-img" src="https://images.unsplash.com/photo-1586804204376-becb4dc730d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="Card image cap">
-             </div>
-             <div class="booking-info">
-             </div>
+          <div class="card main-card">
+            <%= cl_image_tag booking.swimming_pool.photo.key, alt: "luxurious pool", class: "img-show main-image" %>
               <div class="card-body">
-                  <a href="#" class="btn btn-primary">See details</a>
-              </div>
                 <h5 class="card-pool-title"><%= booking.swimming_pool.title %> 🏝</h5>
-                    <p class="card-pool-text">
-                      <i class="fas fa-map-marker-alt"></i>
-                         <%= booking.swimming_pool.location %>
-                    </p>
-                    <p class="card-pool-text">
-                    <i class="fas fa-swimmer"></i>
-                    <%= booking.swimming_pool.capacity %>
+                <div class="row justify-content-between">
+                </div>
+                <p class="card-pool-text">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <%= booking.swimming_pool.location %>
+                </p>
+                <p class="card-pool-text">
+                  <i class="fas fa-swimmer"></i>
+                  <%= booking.swimming_pool.capacity %>
+                </p>
+                <p class="card-pool-text">
+                  <i class="fas fa-calendar-week"></i>
+                  <%= booking.date %>
+                </p>
+                <p class="card-pool-text">
+                  <i class="fas fa-user-friends"></i>
+                  <%= booking.number_people %>
+                </p>
+                <p class="card-pool-text">
+                  <i class="fas fa-comments"></i>
+                  <%= booking.message %>
                 </p>
               </div>
-            <% end %>
-          </div>
+            </div>
+          <% end %>
         </div>
       </div>
-    </div>
-  </div>
+
+ <!--  <h2>Past bookings</h2>
+    <div class=" pt-6 container booking">
+      <% @bookings.each do |booking| %>
+        <div class="card-booking d-flex justify-content-between">
+          <div class="booking-image">
+            <img class="card-img-top card-pool-img" src="https://images.unsplash.com/photo-1586804204376-becb4dc730d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="Card image cap">
+          </div>
+          <div class="booking-info">
+          </div>
+          <div class="card-body">
+            <a href="#" class="btn btn-primary">See details</a>
+          </div>
+          <h5 class="card-pool-title"><%= booking.swimming_pool.title %> 🏝</h5>
+          <p class="card-pool-text">
+            <i class="fas fa-map-marker-alt"></i>
+            <%= booking.swimming_pool.location %>
+          </p>
+          <p class="card-pool-text">
+            <i class="fas fa-swimmer"></i>
+            <%= booking.swimming_pool.capacity %>
+          </p>
+        </div>
+      <% end %>
+    </div> -->
 </div>
+
 
