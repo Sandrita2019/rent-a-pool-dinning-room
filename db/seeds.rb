@@ -23,7 +23,7 @@ file = URI.open(images_index.shuffle!.pop)
     title: Faker::FunnyName.two_word_name,
     description: Faker::ChuckNorris.fact,
     size: rand(10..100),
-    location: Faker::Address.street_address,
+    location: ["Santa Margalida, 07450 Son Serra de Marina", "Carrer Germanor, 07459 Son Serra de Marina", "Camí de s'Estanyol, 07579 Artà", "Carrer de les Dones d' Aigua, 07579 Urbanització s'Estanyol", "Carrer Illots, 07579 Artà", "Colònia de Sant Pere, 07579", "Carrer de la Verge Maria, 07579 Colonia de Sant Pere"].shuffle!.pop,
     capacity: rand(2..10)
   )
   user = User.create!(
