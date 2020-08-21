@@ -16,7 +16,7 @@
   </div>
 </div>
 <div class="container">
-  <h2 class="section-title">Our swimming pools 💦</h2>
+  <h2 class="section-title">Check-out the pools near you: 💦</h2>
   <div class="row justify-content-between">
       <% @swimming_pools.each do |swimming_pool| %>
         <div class="col-4">
@@ -28,11 +28,11 @@
                 <h5 class="card-pool-title"><%= swimming_pool.title %> 🏝</h5>
                 <p class="card-pool-text">
                   <i class="fas fa-map-marker-alt"></i>
-                  <%= swimming_pool.location %>
+                  <%= swimming_pool.location%>
                 </p>
                 <p class="card-pool-text">
                   <i class="fas fa-swimmer"></i>
-                  <%= swimming_pool.capacity %>
+                  <%= swimming_pool.capacity%>
                 </p>
               </div>
           <% end %>
