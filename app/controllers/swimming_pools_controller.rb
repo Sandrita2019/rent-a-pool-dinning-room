@@ -1,6 +1,6 @@
 class SwimmingPoolsController < ApplicationController
-  skip_before_filter :verify_authenticity_token
-  skip_before_filter :authenticate_user!, :raise => false
+  # skip_before_filter :verify_authenticity_token
+  # skip_before_filter :authenticate_user!, :raise => false
   # skip_before_action :authenticate_user # test
 
   def index
