@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  skip_before_action :authenticate_user #testing
   def index
     @bookings = current_user.bookings
     skip_policy_scope
