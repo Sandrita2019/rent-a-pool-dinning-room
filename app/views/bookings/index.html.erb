@@ -29,7 +29,7 @@
     <div class=" pt-4 container">
       <div class="row justify-content-between">
         <% @bookings.each do |booking| %>
-          <div class="col-4">
+          <div class="card col-4">
             <img class="card-img-top card-pool-img" src="https://images.unsplash.com/photo-1586804204376-becb4dc730d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-pool-title"><%= booking.swimming_pool.title %> 🏝</h5>
