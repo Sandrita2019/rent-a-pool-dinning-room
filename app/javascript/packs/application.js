@@ -32,3 +32,21 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
 });
+
+// From get it to stick until
+// $(document).scroll(function() {
+//   if ($('.form').offset().top + $('.form').height() >= $('footer').offset().top - 10)
+//     $('.form').css({
+//       'position': 'absolute',
+//       'bottom': 0,
+//       'top': 'auto'
+//     });
+
+//   if ($(document).scrollTop() + $('.form').height() < $('footer').offset().top)
+//     $('.form').css({
+//       'position': 'fixed',
+//       'top': -30,
+//       'bottom': 'auto'
+//     }); // restore when you scroll up
+// });
+
