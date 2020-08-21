@@ -1,5 +1,8 @@
 class BookingsController < ApplicationController
-  skip_before_action :authenticate_user #testing
+  # skip_before_action :authenticate_user # testing
+  skip_before_filter :verify_authenticity_token
+  skip_before_filter :authenticate_user!, :raise => false
+
   def index
     @bookings = current_user.bookings
     skip_policy_scope
